@@ -2,9 +2,13 @@
 
 Tests for Vacume Cleaner & Anvil Co. Feedback Form
 
+![RUNNING](https://github.com/outerpasta/FeedbackFormTests/blob/master/img/ScreenRec.gif)
+
+![REPORT](https://github.com/outerpasta/FeedbackFormTests/blob/master/img/Screen%20Shot%202015-11-12%20at%209.10.09%20AM.png)
+
 ## Installation
 
-Requires python 2.7!
+Requires python 2.7 - https://www.python.org/downloads/release/python-2710/
 
 Install python dependencies:
 ```
