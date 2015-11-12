@@ -47,3 +47,8 @@ Go To Feedback Form
     Input Text      password    qatest 
     Click Element   tag=button
     Location Should be   ${FEEDBACK URL}
+    Test For Analytics
+
+Test For Analytics
+    ${val}=  Execute Javascript  return window._gat ? '0' : '1';
+    Should Be Equal  ${val}  0
