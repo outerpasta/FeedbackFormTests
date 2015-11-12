@@ -15,7 +15,7 @@ ${R1_Advertising}      /html/body/div/div[2]/form/div[1]/div/div[2]/label/input
 ${R1_Search_Engine}    /html/body/div/div[2]/form/div[1]/div/div[3]/label/input
 ${R1_Friend}           /html/body/div/div[2]/form/div[1]/div/div[4]/label/input
 ${R1_Other}            /html/body/div/div[2]/form/div[1]/div/div[5]/label/input
-${R1_Input}            //*[@id="other"]
+${R1_Other_Input}      //*[@id="other"]
 
 ${R2_1}                /html/body/div/div[2]/form/div[2]/div/div[1]/input
 ${R2_2}                /html/body/div/div[2]/form/div[2]/div/div[2]/input
