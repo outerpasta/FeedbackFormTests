@@ -15,4 +15,3 @@ Valid Submit
     Click Element                  xpath=${BT_Submit}  
     Element Should Be Visible      xpath=${BT_DONE}  
     Click Element                  xpath=${BT_DONE}  
-    Element Should Not Be Visible  xpath=${BT_DONE}  
