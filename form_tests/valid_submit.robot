@@ -4,7 +4,7 @@ Test Setup        Go To Feedback Form
 Resource          _resource.robot
 
 *** Test Cases ***
-User Can Submit
+Valid Submit
     Click Element                  xpath=${R1_Social_Media}
     Click Element                  xpath=${R2_1}   
     Click Element                  xpath=${R3_Yes} 
