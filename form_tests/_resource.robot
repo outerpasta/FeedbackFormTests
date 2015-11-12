@@ -5,7 +5,7 @@ Library           Selenium2Library
 
 *** Variables ***
 ${SERVER}         qatest.jukinmedia.com
-${BROWSER}        Chrome
+${BROWSER}        Firefox
 ${DELAY}          1
 ${LOGIN URL}      http://${SERVER}/
 ${FEEDBACK URL}   http://${SERVER}/#/form
