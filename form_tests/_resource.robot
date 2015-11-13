@@ -10,37 +10,47 @@ ${DELAY}          0.3
 ${LOGIN URL}      http://${SERVER}/
 ${FEEDBACK URL}   http://${SERVER}/#/form
 
-${BT.Mailinglist}                css=body > div > header > div > div.col-xs-2.newsletter
+${feedback}                 div.container.form-container.ng-scope
 
-${MailingList.Email}             css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-body.align-center > input
-${MailingList.AgeCheckbox}       css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-body.align-center > label > input[type="checkbox"]
-${MailingList.SignUp}            css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-footer > button
+${feedback.mailingList}          css=div.col-xs-2.newsletter
+${mailingList}                   div.modal.fade.ng-isolate-scope.in
+${mailingList.email}             css=${mailingList} div.modal-body.align-center > input
+${mailingList.ageCheckbox}       css=${mailingList} div.modal-body.align-center > label input[type="checkbox"]
+${mailingList.signUp}            css=${mailingList} div.modal-footer button
+${mailingList.done}              css=${mailingList} div.modal-footer.align-center.ng-scope button
 
-${__R1.Social_Media}     css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(1) > label > input
-${R1.Social_Media}     css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(1) > label > input
-${R1.Advertising}      css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(2) > label > input
-${R1.Search_Engine}    css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(3) > label > input
-${R1.Friend}           css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(4) > label > input
-${R1.Other}            css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div.col-sm-4 > label > input
-${R1.Other_Input}      css=#other
+${hear}                     ${feedback} form div:nth-child(1) div
+${hear.socialMedia}         css=${hear} div:nth-child(1)
+${hear.advertising}         css=${hear} div:nth-child(2)
+${hear.searchEngine}        css=${hear} div:nth-child(3)
+${hear.friend}              css=${hear} div:nth-child(4)
+${hear.other}               css=${hear} div:nth-child(5) input
+${hear.other.input}         css=#other
 
-${R2.1}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(1) > input
-${R2.2}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(2) > input
-${R2.3}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(3) > input
-${R2.4}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(4) > input
-${R2.5}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(5) > input
+${rating}                   ${feedback} form div:nth-child(2) div
+${rating.1}                 css=${rating} div:nth-child(1) input
+${rating.2}                 css=${rating} div:nth-child(2) input
+${rating.3}                 css=${rating} div:nth-child(3) input
+${rating.4}                 css=${rating} div:nth-child(4) input
+${rating.5}                 css=${rating} div:nth-child(5) input
 
-${R3.Yes}              css=body > div > div.container.form-container.ng-scope > form > div:nth-child(3) > div > div:nth-child(1) > label > input
-${R3.No}               css=body > div > div.container.form-container.ng-scope > form > div:nth-child(3) > div > div:nth-child(2) > label > input
+${recommend}                ${feedback} form > div:nth-child(3) div             
+${recommend.yes}            css=${recommend} div:nth-child(1) input
+${recommend.no}             css=${recommend} div:nth-child(2) input
 
-${I1.First_Name}       css=body > div > div.container.form-container.ng-scope > form > div:nth-child(6) > div:nth-child(1) > input
-${I1.Last_Name}        css=body > div > div.container.form-container.ng-scope > form > div:nth-child(6) > div:nth-child(2) > input
+${names}                    ${feedback} form > div:nth-child(6)
+${names.first}              css=${names} div:nth-child(1) input
+${names.last}               css=${names} div:nth-child(2) input
 
-${I2.Email}            css=body > div > div.container.form-container.ng-scope > form > div:nth-child(9) > div:nth-child(1) > input
-${I2.Phone}            css=#phone
+${contact}                  ${feedback} form > div:nth-child(9)
+${contact.email}            css=${contact} div:nth-child(1) input
+${contact.phone}            css=${contact} div:nth-child(2) input
 
-${BT.Submit}           css=body > div > div.container.form-container.ng-scope > form > div.form-actions.pull-right > button
-${BT.DONE}             css=body > div.modal.fade.ng-isolate-scope.in > div > div > div.modal-footer.align-center.ng-scope > button
+${submit}                   css=${feedback} form div.form-actions.pull-right
+
+
+${done}                     xpath=//button[contains(text(), 'Done')]
+
 
 *** Keywords ***
 Open Browser To Login
