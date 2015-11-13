@@ -5,11 +5,11 @@ Resource          _resource.robot
 
 *** Test Cases ***
 Valid Submit
-    Click Element                  ${R1.Social.Media}
+    Click Element                  ${R1.Social_Media}
     Click Element                  ${R2.1}   
     Click Element                  ${R3.Yes} 
-    Input Text                     ${I1.First.Name}     alex
-    Input Text                     ${I1.Last.Name}      barry
+    Input Text                     ${I1.First_Name}     alex
+    Input Text                     ${I1.Last_Name}      barry
     Input Text                     ${I2.Email}          outerpasta@gmail.com
     Input Text                     ${I2.Phone}          3103101806   
     Click Element                  ${BT.Submit}  
