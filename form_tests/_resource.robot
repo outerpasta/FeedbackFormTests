@@ -6,34 +6,36 @@ Library           Selenium2Library
 *** Variables ***
 ${SERVER}         qatest.jukinmedia.com
 ${BROWSER}        Firefox
-${DELAY}          1
+${DELAY}          0.3
 ${LOGIN URL}      http://${SERVER}/
 ${FEEDBACK URL}   http://${SERVER}/#/form
 
-${R1_Social_Media}     /html/body/div/div[2]/form/div[1]/div/div[1]/label/input
-${R1_Advertising}      /html/body/div/div[2]/form/div[1]/div/div[2]/label/input
-${R1_Search_Engine}    /html/body/div/div[2]/form/div[1]/div/div[3]/label/input
-${R1_Friend}           /html/body/div/div[2]/form/div[1]/div/div[4]/label/input
-${R1_Other}            /html/body/div/div[2]/form/div[1]/div/div[5]/label/input
-${R1_Other_Input}      //*[@id="other"]
+${BT.Mailing_list}     css=body > div > header > div > div.col-xs-2.newsletter
 
-${R2_1}                /html/body/div/div[2]/form/div[2]/div/div[1]/input
-${R2_2}                /html/body/div/div[2]/form/div[2]/div/div[2]/input
-${R2_3}                /html/body/div/div[2]/form/div[2]/div/div[3]/input 
-${R2_4}                /html/body/div/div[2]/form/div[2]/div/div[4]/input
-${R2_5}                /html/body/div/div[2]/form/div[2]/div/div[5]/input
+${R1.Social_Media}     css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(1) > label > input
+${R1.Advertising}      css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(2) > label > input
+${R1.Search_Engine}    css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(3) > label > input
+${R1.Friend}           css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(4) > label > input
+${R1.Other}            css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div.col-sm-4 > label > input
+${R1.Other_Input}      css=#other
 
-${R3_Yes}              /html/body/div/div[2]/form/div[3]/div/div[1]/label/input
-${R3_No}               /html/body/div/div[2]/form/div[3]/div/div[2]/label/input
+${R2.1}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(1) > input
+${R2.2}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(2) > input
+${R2.3}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(3) > input
+${R2.4}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(4) > input
+${R2.5}                css=body > div > div.container.form-container.ng-scope > form > div:nth-child(2) > div > div:nth-child(5) > input
 
-${I1_First_Name}       /html/body/div/div[2]/form/div[5]/div[1]/input
-${I1_Last_Name}        /html/body/div/div[2]/form/div[5]/div[2]/input
+${R3.Yes}              css=body > div > div.container.form-container.ng-scope > form > div:nth-child(3) > div > div:nth-child(1) > label > input
+${R3.No}               css=body > div > div.container.form-container.ng-scope > form > div:nth-child(3) > div > div:nth-child(2) > label > input
 
-${I2_Email}            /html/body/div/div[2]/form/div[6]/div[1]/input
-${I2_Phone}            //*[@id="phone"]
+${I1.First_Name}       css=body > div > div.container.form-container.ng-scope > form > div:nth-child(6) > div:nth-child(1) > input
+${I1.Last_Name}        css=body > div > div.container.form-container.ng-scope > form > div:nth-child(6) > div:nth-child(2) > input
 
-${BT_Submit}           /html/body/div/div[2]/form/div[7]/button
-${BT_DONE}             /html/body/div[3]/div/div/div[3]/button
+${I2.Email}            css=body > div > div.container.form-container.ng-scope > form > div:nth-child(9) > div:nth-child(1) > input
+${I2.Phone}            css=#phone
+
+${BT.Submit}           css=body > div > div.container.form-container.ng-scope > form > div.form-actions.pull-right > button
+${BT.DONE}             css=body > div.modal.fade.ng-isolate-scope.in > div > div > div.modal-footer.align-center.ng-scope > button
 
 *** Keywords ***
 Open Browser To Login
@@ -47,8 +49,8 @@ Go To Feedback Form
     Input Text      password    qatest 
     Click Element   tag=button
     Location Should be   ${FEEDBACK URL}
-    Test For Analytics
+    Test Analytics Exist
 
-Test For Analytics
+Test Analytics Exist
     ${val}=  Execute Javascript  return window._gat ? '0' : '1';
     Should Be Equal  ${val}  0
