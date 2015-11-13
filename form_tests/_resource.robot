@@ -16,10 +16,10 @@ ${MailingList.Email}             css=body > div.modal.fade.ng-isolate-scope.in >
 ${MailingList.AgeCheckbox}       css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-body.align-center > label > input[type="checkbox"]
 ${MailingList.SignUp}            css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-footer > button
 
-${R1.Social_Media}     css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(1) > label > input
-${R1.Advertising}      css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(2) > label > input
-${R1.Search_Engine}    css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(3) > label > input
-${R1.Friend}           css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(4) > label > input
+${R1.Social_Media}     css=div.form-group label:contains('Social Media')
+${R1.Advertising}      css=div.form-group label:contains('Advertising')
+${R1.Search_Engine}    css=div.form-group label:contains('Search Engine')
+${R1.Friend}           css=div.form-group label:contains('Friend')
 ${R1.Other}            css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div.col-sm-4 > label > input
 ${R1.Other_Input}      css=#other
 
