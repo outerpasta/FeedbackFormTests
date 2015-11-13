@@ -10,7 +10,11 @@ ${DELAY}          0.3
 ${LOGIN URL}      http://${SERVER}/
 ${FEEDBACK URL}   http://${SERVER}/#/form
 
-${BT.Mailing_list}     css=body > div > header > div > div.col-xs-2.newsletter
+${BT.Mailinglist}                css=body > div > header > div > div.col-xs-2.newsletter
+
+${MailingList.Email}             css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-body.align-center > input
+${MailingList.AgeCheckbox}       css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-body.align-center > label > input[type="checkbox"]
+${MailingList.SignUp}            css=body > div.modal.fade.ng-isolate-scope.in > div > div > form > div.modal-footer > button
 
 ${R1.Social_Media}     css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(1) > label > input
 ${R1.Advertising}      css=body > div > div.container.form-container.ng-scope > form > div:nth-child(1) > div > div:nth-child(2) > label > input

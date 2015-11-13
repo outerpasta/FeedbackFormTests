@@ -43,7 +43,7 @@ User Must Input Last Name
     Click Element                   ${BT.Submit}  
     Element Should Not Be Visible   ${BT.DONE}   
     
-User Must Input Other If Selected 
+User Must Specify Reason If "Other" Selected 
     Click Element                   ${R1.Other}
     Click Element                   ${R2.1} 
     Click Element                   ${R3.Yes}   
@@ -54,7 +54,7 @@ User Must Input Other If Selected
     Click Element                   ${BT.Submit}  
     Element Should Not Be Visible   ${BT.DONE} 
     
-User Can Input Other If Selected 
+User Can Specify Reason If "Other" Selected 
     Click Element                   ${R1.Other}
     Input Text                      ${R1.Other_Input}   the news
     Click Element                   ${R2.1} 
