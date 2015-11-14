@@ -1,8 +1,38 @@
 *** Settings ***
-Documentation     Test succesful run
+Documentation     Test Mailing List Subscription
 Test Setup        Go To Feedback Form
 Resource          _resource.robot
 
-*** Ignore ***
-Valid Email
+*** Test Cases ***
+User Must Enter Email
+    Click Element   ${feedback.mailingList}
+    Click Element   ${mailingList.ageCheckbox}
+    Click Element   ${mailingList.signUp}
+    Element Should Be Visible        css=${mailingList}
+
+User Must Enter Valid Email
+    Click Element   ${feedback.mailingList}
+    Input Text      ${mailingList.email}          outerpasta@gmail
+    Click Element   ${mailingList.ageCheckbox}
+    Click Element   ${mailingList.signUp}
+    Element Should Be Visible        css=${mailingList}
+
+User Must Enter Age Verification
+    Click Element   ${feedback.mailingList}
+    Input Text      ${mailingList.email}          outerpasta@gmail.com
+    Click Element   ${mailingList.signUp}
+    Element Should Be Visible        css=${mailingList}
+    
+User Can Subscribe
+    Click Element   ${feedback.mailingList}
+    Input Text      ${mailingList.email}          outerpasta@gmail.com
+    Click Element   ${mailingList.ageCheckbox}
+    Click Element   ${mailingList.signUp}
+    Element Should Not Be Visible    css=${mailingList}
+    
+# TODO: fix implementation, not currently working
+Style Check      
+    Mouse Over       ${feedback.mailingList}
+    ${style}=        Get Element Attribute      ${feedback.mailingList}@style
+    Should Contain   ${style}                   \#FF0
     

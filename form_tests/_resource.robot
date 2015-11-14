@@ -12,12 +12,11 @@ ${FEEDBACK URL}   http://${SERVER}/#/form
 
 ${feedback}                 div.container.form-container.ng-scope
 
-${feedback.mailingList}          css=div.col-xs-2.newsletter
+${feedback.mailingList}          css=div.col-xs-2.newsletter a
 ${mailingList}                   div.modal.fade.ng-isolate-scope.in
-${mailingList.email}             css=${mailingList} div.modal-body.align-center > input
-${mailingList.ageCheckbox}       css=${mailingList} div.modal-body.align-center > label input[type="checkbox"]
-${mailingList.signUp}            css=${mailingList} div.modal-footer button
-${mailingList.done}              css=${mailingList} div.modal-footer.align-center.ng-scope button
+${mailingList.email}             css=${mailingList} input[type="email"]
+${mailingList.ageCheckbox}       css=${mailingList} input[type="checkbox"]
+${mailingList.signUp}            xpath=//button[contains(text(), 'Sign Up')]
 
 ${hear}                     ${feedback} form div:nth-child(1) div
 ${hear.socialMedia}         css=${hear} div:nth-child(1)
