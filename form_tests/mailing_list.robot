@@ -4,10 +4,10 @@ Test Setup        Go To Feedback Form
 Resource          _resource.robot
 
 *** Test Cases ***
-Style Check      
+Hover Over Link Turns Yellow    
     Mouse Over       ${feedback.mailingList}
-    ${color}=        Execute Javascript     var elem = document.evaluate("/html/body/div/header/div/div[3]/a/span",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;var color = window.getComputedStyle(elem, null).getPropertyValue("color");return color;
-    Should Be Equal  ${color}            rgb(255, 255, 0)
+    ${color}=        Execute Javascript     ${EXECDIR}/js/getLinkColor.js
+    Should Be Equal  ${color}               rgb(255, 255, 0)
 
 User Must Enter Email
     Click Element   ${feedback.mailingList}
