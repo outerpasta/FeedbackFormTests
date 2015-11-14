@@ -1,3 +1,4 @@
-var elem = document.evaluate("/html/body/div/header/div/div[3]/a/span", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;
-var color = window.getComputedStyle(elem, null).getPropertyValue("color");
+var elem = document.getElementsByClassName("col-xs-2 newsletter")[0]
+var link = elem.getElementsByTagName("a")[0]
+var color = window.getComputedStyle(link, null).getPropertyValue("color");
 return color;

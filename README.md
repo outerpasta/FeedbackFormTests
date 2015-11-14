@@ -4,7 +4,7 @@ Tests for Vacume Cleaner & Anvil Co. Feedback Form
 
 ![RUNNING](https://github.com/outerpasta/FeedbackFormTests/blob/master/demo/ScreenRec.gif)
 
-![REPORT](https://github.com/outerpasta/FeedbackFormTests/blob/master/demo/Screen%20Shot%202015-11-13%20at%207.41.34%20PM.png)
+![REPORT](https://github.com/outerpasta/FeedbackFormTests/blob/master/demo/Screen%20Shot%202015-11-13%20at%208.10.51%20PM.png)
 
 ## Installation
 
