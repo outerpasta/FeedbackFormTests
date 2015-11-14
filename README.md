@@ -25,12 +25,23 @@ Then to execute tests:
 $ ./tmp/bin/pybot form_tests/
 $ ./tmp/bin/pybot --variable BROWSER:Chrome form_tests/  # Use Chromedriver
 ```
-### Browser specific
+#### Chrome Setup
 To run tests for Chrome browser ChromeDriver is required:
 	https://code.google.com/p/selenium/wiki/ChromeDriver
 
-To run tests for Chrome browser SafariDriver is required:
+#### Safari Setup
+To run tests for Safari browser -
+
+SafariDriver is required:
 	https://code.google.com/p/selenium/wiki/SafariDriver
+	
+Download selenium-server-standalone-2.48.2.jar 
+	http://www.seleniumhq.org/download/ 
+	
+Set Env value for SELENIUM_SERVER_JAR to path to selenium-server-standalone-2.48.2.jar 
+```
+$ export SELENIUM_SERVER_JAR=/path/to/selenium-server-standalone-2.48.2.jar
+```
 
 ## Running
 
@@ -42,4 +53,10 @@ $ pybot form_tests/
 Run test for each browser:
 ```
 $ sh bin/allbrowsers.sh
+```
+or 
+```
+$ pybot form_tests/
+$ pybot --variable BROWSER:Chrome form_tests/
+$ pybot --variable BROWSER:Safari form_tests/
 ```
