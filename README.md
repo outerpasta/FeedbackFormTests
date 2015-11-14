@@ -25,6 +25,11 @@ Then to execute tests:
 $ ./tmp/bin/pybot form_tests/
 $ ./tmp/bin/pybot --variable BROWSER:Chrome form_tests/  # Use Chromedriver
 ```
+### Browser specific
+To run tests for Chrome browser ChromeDriver is required:
+	https://code.google.com/p/selenium/wiki/ChromeDriver
+To run tests for Chrome browser SafariDriver is required:
+	https://code.google.com/p/selenium/wiki/SafariDriver
 
 ## Running
 
