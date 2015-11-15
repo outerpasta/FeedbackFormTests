@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Succesful Run Smoke Test
+Documentation     Smoke Test
 Resource          _resource.robot
 
 *** Test Cases ***

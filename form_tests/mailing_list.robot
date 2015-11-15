@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Test Mailing List Subscription
+Documentation     Mailing List Subscription
 Test Setup        Go To Feedback Form
 Resource          _resource.robot
 

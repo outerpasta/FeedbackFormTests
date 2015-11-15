@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Test integrity of required fields
+Documentation     Required Fields
 Test Setup        Go To Feedback Form
 Resource          _resource.robot
 
