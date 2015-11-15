@@ -6,7 +6,7 @@ Library           Selenium2Library
 *** Variables ***
 ${SERVER}         qatest.jukinmedia.com
 ${BROWSER}        Firefox
-${DELAY}          1
+${DELAY}          0.5
 ${LOGIN URL}      http://${SERVER}/
 ${FEEDBACK URL}   http://${SERVER}/#/form
 
@@ -17,7 +17,7 @@ ${companyMoto}              css=div.col-xs-8.align-center p
 ${companyName}              css=div.col-xs-8.align-center h1
 
 ${feedback.mailingList}          css=div.col-xs-2.newsletter a
-${mailingList}                   div.modal.fade.ng-isolate-scope.in
+${mailingList}                   div.modal
 ${mailingList.email}             css=${mailingList} input[type="email"]
 ${mailingList.ageCheckbox}       css=${mailingList} input[type="checkbox"]
 ${mailingList.signUp}            xpath=//button[contains(text(), 'Sign Up')]
@@ -51,8 +51,8 @@ ${contact.phone}            css=${contact} div:nth-child(2) input
 
 ${submit}                   css=${feedback} div.form-actions.pull-right
 
-
-${done}                     xpath=//button[contains(text(), 'Done')]
+${x-done}                   xpath=//button[contains(text(), 'Done')]
+${done}                     css=div.modal div.align-center button
 
 
 *** Keywords ***
@@ -60,6 +60,7 @@ Open Browser To Login
     Open Browser            ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed      ${DELAY}
+    Go To Feedback Form    
     
 Go To Feedback Form
     Go To    ${LOGIN URL}
