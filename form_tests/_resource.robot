@@ -12,6 +12,10 @@ ${FEEDBACK URL}   http://${SERVER}/#/form
 
 ${feedback}                 div.container.form-container.ng-scope
 
+${companyLogo}              css=div.col-xs-2.logo img
+${companyMoto}              css=div.col-xs-8.align-center p
+${companyName}              css=div.col-xs-8.align-center h1
+
 ${feedback.mailingList}          css=div.col-xs-2.newsletter a
 ${mailingList}                   div.modal.fade.ng-isolate-scope.in
 ${mailingList.email}             css=${mailingList} input[type="email"]
@@ -45,7 +49,7 @@ ${contact}                  ${feedback} form > div:nth-child(9)
 ${contact.email}            css=${contact} div:nth-child(1) input
 ${contact.phone}            css=${contact} div:nth-child(2) input
 
-${submit}                   css=${feedback} form div.form-actions.pull-right
+${submit}                   css=${feedback} div.form-actions.pull-right
 
 
 ${done}                     xpath=//button[contains(text(), 'Done')]

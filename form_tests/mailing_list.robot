@@ -4,11 +4,6 @@ Test Setup        Go To Feedback Form
 Resource          _resource.robot
 
 *** Test Cases ***
-Hover Over Link Turns Yellow    
-    Mouse Over       ${feedback.mailingList}
-    ${color}=        Execute Javascript     ${EXECDIR}/js/getLinkColor.js
-    Should Be Equal  ${color}               rgb(255, 255, 0) # <-- YELLOW
-
 User Must Enter Email
     Click Element   ${feedback.mailingList}
     Click Element   ${mailingList.ageCheckbox}
