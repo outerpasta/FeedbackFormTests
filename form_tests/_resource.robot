@@ -20,7 +20,7 @@ ${feedback.mailingList}          css=div.col-xs-2.newsletter a
 ${mailingList}                   div.modal
 ${mailingList.email}             css=${mailingList} input[type="email"]
 ${mailingList.ageCheckbox}       css=${mailingList} input[type="checkbox"]
-${mailingList.signUp}            xpath=//button[contains(text(), 'Sign Up')]
+${mailingList.signUp}            css=div.modal form button
 
 ${hear}                     ${feedback} form div:nth-child(1) div
 ${hear.socialMedia}         css=${hear} div:nth-child(1)
@@ -51,7 +51,6 @@ ${contact.phone}            css=${contact} div:nth-child(2) input
 
 ${submit}                   css=${feedback} div.form-actions.pull-right
 
-${x-done}                   xpath=//button[contains(text(), 'Done')]
 ${done}                     css=div.modal div.align-center button
 
 
