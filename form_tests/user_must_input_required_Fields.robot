@@ -46,7 +46,7 @@ User Must Specify Reason If "Other" Selected
     Enter Contact Info
     Click Element                   ${submit}  
     Element Should Not Be Visible   ${done} 
-    User Can Specify Reason If "Other" Selected
+    User Can Input If Required Item Selected      ${hear.other.input}      the news
     
 User Must Specify Reason If "No" Selected
     Click Element                   ${hear.socialMedia}
@@ -56,21 +56,16 @@ User Must Specify Reason If "No" Selected
     Enter Contact Info
     Click Element                   ${submit}
     Element Should Not Be Visible   ${done}
-    User Can Specify Reason If "No" Selected
+    User Can Input If Required Item Selected      ${recommend.no.input}    bad service
     
     
 *** Keywords ***
-User Can Specify Reason If "Other" Selected 
-    Input Text                      ${hear.other.input}      the news 
+User Can Input If Required Item Selected 
+    [Arguments]                     ${required_input}      ${text}
+    Input Text                      ${required_input}      ${text}
     Click Element                   ${submit}  
     Element Should Be Visible       ${done} 
     Click Element                   ${done} 
-
-User Can Specify Reason If "No" Selected
-    Input Text                      ${recommend.no.input}      bad service
-    Click Element                   ${submit}
-    Element Should Be Visible       ${done}
-    Click Element                   ${done}
     
 Enter Names
     Input Text  ${names.first}    alex
