@@ -55,19 +55,22 @@ ${done}                     css=div.modal div.align-center button
 
 
 *** Keywords ***
-Open Browser To Login
+Open Browser To Feedback Form
     Open Browser            ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed      ${DELAY}
-    Go To Feedback Form    
+    Open Feedback Form    
     
-Go To Feedback Form
+Open Feedback Form
     Go To    ${LOGIN URL}
     Input Text      username    jukinmedia
     Input Text      password    qatest 
     Click Element   tag=button
     Location Should be   ${FEEDBACK URL}
     Test Analytics Exist
+
+Go To Feedback Form
+    Go To    ${FEEDBACK URL}
 
 Test Analytics Exist
     ${val}=  Execute Javascript  return window._gat ? '0' : '1';

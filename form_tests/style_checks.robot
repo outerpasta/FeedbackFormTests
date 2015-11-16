@@ -13,6 +13,7 @@ Company Logo 15px from left edge
 
 *** Keywords ***
 Init Utils
+    Go To Feedback Form
     Execute Javascript    ${EXECDIR}/js/window_utils.js
 
 Compare CSS Value
