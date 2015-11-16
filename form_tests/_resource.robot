@@ -10,7 +10,7 @@ ${DELAY}          0.5
 ${LOGIN URL}      http://${SERVER}/
 ${FEEDBACK URL}   http://${SERVER}/#/form
 
-${feedback}                 div.container.form-container.ng-scope
+${feedback}                 div.container.form-container
 
 ${companyLogo}              css=div.col-xs-2.logo img
 ${companyMoto}              css=div.col-xs-8.align-center p
@@ -40,6 +40,7 @@ ${rating.5}                 css=${rating} div:nth-child(5) input
 ${recommend}                ${feedback} form > div:nth-child(3) div             
 ${recommend.yes}            css=${recommend} div:nth-child(1) input
 ${recommend.no}             css=${recommend} div:nth-child(2) input
+${recommend.no.input}       css=${feedback} form textarea
 
 ${names}                    ${feedback} form > div:nth-child(6)
 ${names.first}              css=${names} div:nth-child(1) input

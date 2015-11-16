@@ -48,6 +48,15 @@ User Must Specify Reason If "Other" Selected
     Element Should Not Be Visible   ${done} 
     User Can Specify Reason If "Other" Selected
     
+User Must Specify Reason If "No" Selected
+    Click Element                   ${hear.socialMedia}
+    Click Element                   ${rating.1}
+    Click Element                   ${recommend.no}
+    Enter Names
+    Enter Contact Info
+    Click Element                   ${submit}
+    Element Should Not Be Visible   ${done}
+    User Can Specify Reason If "No" Selected
     
     
 *** Keywords ***
@@ -56,6 +65,12 @@ User Can Specify Reason If "Other" Selected
     Click Element                   ${submit}  
     Element Should Be Visible       ${done} 
     Click Element                   ${done} 
+
+User Can Specify Reason If "No" Selected
+    Input Text                      ${recommend.no.input}      bad service
+    Click Element                   ${submit}
+    Element Should Be Visible       ${done}
+    Click Element                   ${done}
     
 Enter Names
     Input Text  ${names.first}    alex
